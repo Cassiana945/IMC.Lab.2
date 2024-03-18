@@ -33,18 +33,19 @@ public class PessoaView  extends JFrame {
 
     public PessoaView() { //CONSTRUTOR
 
-
-
-        add(pnPrincipal, BorderLayout.CENTER);  //set the panel to the frame
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //set what happens when they close the frame
-        setTitle("Calculadora IMC"); //set the title
-        setSize(500, 163); // set the window  to be match a certain size
-        setVisible(true); //set the window to be visible and in focus
     }
 
-    public static void main(String[] args){ //Metodo principal
 
- PessoaView myPessoa = new PessoaView();
+public static void main(String[] args){ //Metodo principal
+        JFrame frame  = new JFrame("Calculadora IMC");
+        frame.setContentPane(new PessoaView().pnPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
- }
+    }
+}
+
+
+ 
 }
