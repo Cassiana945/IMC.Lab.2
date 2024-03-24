@@ -90,5 +90,6 @@ public class Pessoa {
         } else if (imc > 40) {
             System.out.println("Obesidade III.");
         }
+   return null;
     }
 }
