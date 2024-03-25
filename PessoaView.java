@@ -58,6 +58,10 @@ public class PessoaView  extends JFrame {
                 pessoa.calcularIMC();
                 lbIMC.setText((String.format("%.2f", pessoa.getImc())));
                 lbSaude.setText(pessoa.imprimir());
+                System.out.println(pessoa.getNome());
+                System.out.println(pessoa.getIdade());
+                System.out.println(pessoa.getAltura());
+                System.out.println(pessoa.getPeso());
             }
         });
     }
