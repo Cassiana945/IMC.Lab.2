@@ -18,6 +18,7 @@ public class Principal {
 
         pessoa.calcularIMC(); // Primeiro calculamos o IMC
         System.out.println("IMC: " + pessoa.getImc());
+        System.out.println("Estado:" + pessoa.getEstadoSaude());
         pessoa.imprimir();
     }
 }
