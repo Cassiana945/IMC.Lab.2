@@ -57,7 +57,7 @@ public class PessoaView  extends JFrame {
                 pessoa.setPeso(Double.parseDouble(textPeso.getText()));
                 pessoa.calcularIMC();
                 lbIMC.setText((String.format("%.2f", pessoa.getImc())));
-                lbSaude.setText(pessoa.imprimir());
+                lbSaude.setText((String.format("%.2f", pessoa.getEstadoSaude())));
                 System.out.println(pessoa.getNome());
                 System.out.println(pessoa.getIdade());
                 System.out.println(pessoa.getAltura());
