@@ -4,6 +4,7 @@ package br;
 public class Pessoa {
 
     private String nome;
+    private String estadoSaude;
     private int idade;
     private double peso;
     private double altura;
@@ -41,6 +42,8 @@ public class Pessoa {
         return this.altura;
     }
 
+    public String getEstadoSaude() { return this.estadoSaude; }
+
     public double getImc() {
         return this.imc;
     }
@@ -66,7 +69,7 @@ public class Pessoa {
     public void setAltura(double altura) {
         this.altura = altura;
     }
-
+    public void setEstadoSaude(String estadoSaude) { this.estadoSaude = estadoSaude; }
     public void setImc(double imc) {
         this.imc = imc;
     }
@@ -79,17 +82,18 @@ public class Pessoa {
         System.out.println("Altura: " + this.altura);
         System.out.println("IMC: " + this.imc);
 
-        if (imc <= 18.5) {
-            System.out.println("Magro(a).");
-        } else if (imc > 18.5 && imc < 24.9) {
-            System.out.println("Saudável.");
-        } else if (imc > 25 && imc <= 29.9) {
-            System.out.println("Obesidade I.");
-        } else if (imc > 30 && imc <= 39.9) {
-            System.out.println("Obesidade II.");
-        } else if (imc > 40) {
-            System.out.println("Obesidade III.");
+
+
+            if (this.imc <= 18.5) {
+                estadoSaude = "Magro(a)";
+            } else if (this.imc > 18.5 && imc < 24.9) {
+                estadoSaude = "Saudável";
+            } else if (this.imc > 25 && imc <= 29.9) {
+                estadoSaude = "Obesidade I";
+            } else if (this.imc > 30 && imc <= 39.9) {
+                estadoSaude = "Obesidade II";
+            } else if (this.imc > 40) {
+                estadoSaude = "Obesidade III";
+            }
         }
-   return null;
     }
-}
