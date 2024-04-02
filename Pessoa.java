@@ -42,7 +42,9 @@ public class Pessoa {
         return this.altura;
     }
 
-    public String getEstadoSaude() { return this.estadoSaude; }
+    public String getEstadoSaude() {
+        return this.estadoSaude;
+    }
 
     public double getImc() {
         return this.imc;
@@ -69,20 +71,29 @@ public class Pessoa {
     public void setAltura(double altura) {
         this.altura = altura;
     }
-    public void setEstadoSaude(String estadoSaude) { this.estadoSaude = estadoSaude; }
+
+    public void setEstadoSaude(String estadoSaude) {
+        this.estadoSaude = estadoSaude;
+    }
+
     public void setImc(double imc) {
         this.imc = imc;
     }
 
-    public void imprimir() {
+    public String imprimir() {
 
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Peso: " + this.peso);
         System.out.println("Altura: " + this.altura);
         System.out.println("IMC: " + this.imc);
+        return null;
+    }
 
+        public String estadoSaude() {
 
+            calcularIMC();
+            double imc = this.imc;
 
             if (this.imc <= 18.5) {
                 estadoSaude = "Magro(a)";
@@ -95,5 +106,7 @@ public class Pessoa {
             } else if (this.imc > 40) {
                 estadoSaude = "Obesidade III";
             }
+            return estadoSaude;
         }
     }
+
