@@ -1,4 +1,4 @@
-package principal;    ///////////////Principal.java
+package principal;
 import java.util.Scanner;
 import br.Pessoa;
 public class Principal {
@@ -17,8 +17,8 @@ public class Principal {
         pessoa.setAltura(entrada.nextFloat());
 
         pessoa.calcularIMC(); // Primeiro calculamos o IMC
+        pessoa.imprimir();
         System.out.println("IMC: " + pessoa.getImc());
         System.out.println("Estado:" + pessoa.getEstadoSaude());
-        pessoa.imprimir();
     }
 }
