@@ -1,4 +1,4 @@
-package view;  ///PessoaView.java
+package view;
 
 import br.Pessoa;
 import principal.Principal;
@@ -49,7 +49,7 @@ public class PessoaView  extends JFrame {
 
         btnIMC.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
 
                 pessoa.setNome(textNome.getText());
                 pessoa.setIdade(Integer.parseInt(textIdade.getText()));
@@ -57,7 +57,7 @@ public class PessoaView  extends JFrame {
                 pessoa.setPeso(Double.parseDouble(textPeso.getText()));
                 pessoa.calcularIMC();
                 lbIMC.setText((String.format("%.2f", pessoa.getImc())));
-                lbSaude.setText((String.format("%.2f", pessoa.getEstadoSaude())));
+                lbSaude.setText(pessoa.estadoSaude());
                 System.out.println(pessoa.getNome());
                 System.out.println(pessoa.getIdade());
                 System.out.println(pessoa.getAltura());
@@ -76,7 +76,6 @@ public class PessoaView  extends JFrame {
 
     }
 }
-
 
 
 
