@@ -5,23 +5,40 @@ public class Pessoa {
 
     private String nome;
     private String estadoSaude;
+    private int cpf;
     private int idade;
     private double peso;
     private double altura;
     private double imc;
+
+
+    /////////////////////// To String
+
+    @Override
+    public String toString() {
+        return nome + ";" +
+                idade + ";" +
+                peso + ";" +
+                altura + ";" +
+                imc + ";" +
+                estadoSaude + ";"+
+                cpf + ";";
+    }
+
 
     /////////////////////////Construtor Sobrecarga
     public Pessoa() {
     }
 
     /////////////////////////Construtor
-    public Pessoa(String nome, int idade, double peso, double altura, double imc) {
+    public Pessoa(String nome, int idade, double peso, double altura, double imc, int cpf) {
 
         this.nome = nome;
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
         this.imc = imc;
+        this.cpf = cpf;
 
     }
     //////////////////////////////metodo Get (Ler o valor do atributo)
@@ -54,7 +71,9 @@ public class Pessoa {
         this.imc = this.peso / (this.altura * this.altura);
     }
 
-///////////////////////////////metodo Set (modificar o valor do atributo)
+    public int getCpf() { return this.cpf; }
+
+    ///////////////////////////////metodo Set (modificar o valor do atributo)
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -80,12 +99,15 @@ public class Pessoa {
         this.imc = imc;
     }
 
+    public void setCpf(int cpf) { this.cpf = cpf; }
+
     public String imprimir() {
 
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("Peso: " + this.peso);
         System.out.println("Altura: " + this.altura);
+        System.out.println("CPF: " + this.cpf);
         System.out.println("IMC: " + this.imc);
         return null;
     }
@@ -109,4 +131,3 @@ public class Pessoa {
             return estadoSaude;
         }
     }
-
