@@ -11,10 +11,12 @@ public class Principal {
         pessoa.setNome(entrada.nextLine());
         System.out.println("Entre com a sua idade: ");
         pessoa.setIdade(entrada.nextInt());
-        System.out.println("Entre com o seu peso: ");
-        pessoa.setPeso(entrada.nextFloat());
         System.out.println("Entre com a sua altura: ");
         pessoa.setAltura(entrada.nextFloat());
+        System.out.println("Entre com o seu peso: ");
+        pessoa.setPeso(entrada.nextFloat());
+        System.out.println("Entre com o seu CPF: ");
+        pessoa.setCpf(entrada.nextInt());
 
         pessoa.calcularIMC(); // Primeiro calculamos o IMC
         pessoa.imprimir();
